@@ -17,15 +17,11 @@ jobs:
    runs-on: ubuntu-latest
    steps:
    - name: resusing addtitional workflow
-   - uses: goyal20nikita/ReusableWorkflow/blob/main/.github/workflows/addition.yaml@main
+   - uses: goyal20nikita/ReusableWorkflow/.github/workflows/addition.yaml@main
      with:
       number1: $number1
       number2: $number2
-   - name: resusing subtraction workflow
-   - uses: goyal20nikita/ReusableWorkflow/blob/main/.github/workflows/subtraction.yaml@main
-     with:
-      number1: $number1
-      number2: $number2
+  
   
      
      
