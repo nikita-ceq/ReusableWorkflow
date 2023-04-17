@@ -16,11 +16,7 @@ jobs:
  job1:
    runs-on: ubuntu-latest
    steps:
-   - name: resusing addtitional workflow
-   - uses: goyal20nikita/ReusableWorkflow/.github/workflows/addition.yaml@main
-     with:
-      number1: $number1
-      number2: $number2
+   - uses: goyal20nikita/ReusableWorkflow/.github/workflows/test.yaml@main
   
   
      
