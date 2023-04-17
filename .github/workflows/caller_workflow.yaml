@@ -5,12 +5,14 @@ on:
    number1:
     description: 'Enter first number'     
     required: true
+    type: number
    number2:
     description: 'Enter second number'     
     required: true
-env:
- number1: ${{ github.event.inputs.number1 }}
- number2: ${{ github.event.inputs.number2 }}
+    type: number
+#env:
+ #number1: ${{ github.event.inputs.number1 }}
+ #number2: ${{ github.event.inputs.number2 }}
 
 jobs:
  calling-test-job:
@@ -18,13 +20,13 @@ jobs:
  calling-addition-job:
   uses: goyal20nikita/ReusableWorkflow/.github/workflows/addition.yaml@main
   with:
-   number1: $number1
-   number2: $number2
+   number1: 2
+   number2: 4
  calling-subtraction-job:
   uses: goyal20nikita/ReusableWorkflow/.github/workflows/subtraction.yaml@main
   with:
-   number1: $number1
-   number2: $number2
+   number1: 4
+   number2: 3
  
   
   
