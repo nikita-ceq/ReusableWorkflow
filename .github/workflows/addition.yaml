@@ -17,7 +17,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
    - uses: actions/checkout@v3
-   - run: $number1 + $number2
+   - run: echo " $number1 and  $number2"
  
  
  
