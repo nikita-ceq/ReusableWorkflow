@@ -17,7 +17,10 @@ jobs:
    runs-on: ubuntu-latest
    steps:
    - uses: actions/checkout@v3
-   - run: echo " $number1 and  $number2"
+   - run: |
+      echo "Add two numbers $number1 and  $number2"
+      sum=`expr $number1 + $number2`
+      echo "$sum"
  
  
  
