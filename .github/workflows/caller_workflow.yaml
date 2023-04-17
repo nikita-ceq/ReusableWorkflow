@@ -16,11 +16,19 @@ jobs:
  job1:
    runs-on: ubuntu-latest
    steps:
-   - uses: actions/checkout@v3
-   - run: |
-      echo "Add two numbers $number1 and  $number2"
-      sum=`expr $number1 + $number2`
-      echo "$sum"
+   - name: resusing addtitional workflow
+   - uses: goyal20nikita/ReusableWorkflow/blob/main/.github/workflows/addition.yaml@main
+     with:
+      number1: $number1
+      number2: $number2
+   - name: resusing subtraction workflow
+   - uses: goyal20nikita/ReusableWorkflow/blob/main/.github/workflows/subtraction.yaml@main
+     with:
+      number1: $number1
+      number2: $number2
+   - run: echo "done"
+     
+     
  
  
  
