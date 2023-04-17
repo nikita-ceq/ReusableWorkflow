@@ -26,8 +26,7 @@ jobs:
      with:
       number1: $number1
       number2: $number2
-   - name: my_step
-   - run: echo done
+  
      
      
  
