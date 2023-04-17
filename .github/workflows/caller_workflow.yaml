@@ -13,8 +13,19 @@ env:
  number2: ${{ github.event.inputs.number2 }}
 
 jobs:
- job1:
+ calling-test-job:
   uses: goyal20nikita/ReusableWorkflow/.github/workflows/test.yaml@main
+ calling-addition-job:
+  uses: goyal20nikita/ReusableWorkflow/.github/workflows/addition.yaml@main
+  with:
+   number1: $number1
+   number2: $number2
+ calling-subtraction-job:
+  uses: goyal20nikita/ReusableWorkflow/.github/workflows/subtraction.yaml@main
+  with:
+   number1: $number1
+   number2: $number2
+ 
   
   
      
