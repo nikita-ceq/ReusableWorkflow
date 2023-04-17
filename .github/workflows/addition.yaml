@@ -1,25 +1,27 @@
-name: Reusable_workflow
+name: Addition_Reusable_workflow
 on: 
- workflow_dispatch:
+ workflow_call:
   inputs:
    number1:
     description: 'Enter first number'     
     required: true
+    type: number
    number2:
     description: 'Enter second number'     
-    required: true
-env:
- number1: ${{ github.event.inputs.number1 }}
- number2: ${{ github.event.inputs.number2 }}
+    required: true 
+    type: number
+#env:
+ #number1: ${{ inputs.number1 }}
+# number2: ${{ inputs.number2 }}
 
 jobs:
- job1:
+ addition:
    runs-on: ubuntu-latest
    steps:
    - uses: actions/checkout@v3
    - run: |
-      echo "Add two numbers $number1 and  $number2"
-      sum=`expr $number1 + $number2`
+      echo "Add two numbers ${{ inputs.number1 }} and  ${{ inputs.number2 }}"
+      sum=`expr ${{ inputs.number1 }} + ${{ inputs.number2 }} `
       echo "$sum"
  
  
