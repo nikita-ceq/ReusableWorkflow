@@ -14,9 +14,7 @@ env:
 
 jobs:
  job1:
-   runs-on: ubuntu-latest
-   steps:
-   - uses: goyal20nikita/ReusableWorkflow/.github/workflows/test.yaml@main
+  uses: goyal20nikita/ReusableWorkflow/.github/workflows/test.yaml@main
   
   
      
