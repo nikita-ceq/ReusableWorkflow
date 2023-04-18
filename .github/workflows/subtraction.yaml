@@ -21,7 +21,7 @@ jobs:
    - uses: actions/checkout@v3
    - run: |
       echo "Subtract two numbers ${{ inputs.number1 }} and  ${{ inputs.number2 }}"
-      subtraction=`expr ${{ inputs.number1 }} - {{ inputs.$number2 }}`
+      subtraction=`expr ${{ inputs.number1 }} * {{ inputs.$number2 }}`
       echo "$subtraction"
  
  
