@@ -27,11 +27,11 @@ jobs:
   with:
    number1: 4
    number2: 3
- retrieve_output_from_job2:
-   runs-on: ubuntu-latest
-   needs: calling-addition-job
-   steps:
-   - run: echo ${{ needs.calling-addition-job.outputs.sum }} 
+#  retrieve_output_from_job2:
+#    runs-on: ubuntu-latest
+#    needs: calling-addition-job
+#    steps:
+#    - run: echo ${{ needs.calling-addition-job.outputs.sum }} 
  
   
   
