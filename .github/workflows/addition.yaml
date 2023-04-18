@@ -10,6 +10,11 @@ on:
     description: 'Enter second number'     
     required: true 
     type: number
+  outputs:
+    sum:
+      description: "addition value"
+      value: ${{ jobs.addition.outputs.output1 }}
+  
 #env:
  #number1: ${{ inputs.number1 }}
 # number2: ${{ inputs.number2 }}
@@ -17,12 +22,15 @@ on:
 jobs:
  addition:
    runs-on: ubuntu-latest
+   outputs:
+      output1: ${{ steps.step1.outputs.summation }}
    steps:
    - uses: actions/checkout@v3
-   - run: |
+   - id: step1
+     run: |
       echo "Add two numbers ${{ inputs.number1 }} and  ${{ inputs.number2 }}"
       sum=`expr ${{ inputs.number1 }} + ${{ inputs.number2 }} `
-      echo "$sum"
+      echo "summation=$sum"
  
  
  
