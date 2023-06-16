@@ -1,1 +1,14 @@
+name: Addition_Reusable_workflow
+on: 
+ workflow_dispatch:
 
+jobs:
+ test:
+   runs-on: ubuntu-latest
+   steps:
+   - uses: actions/checkout@v3
+   - run: echo hi > world.txt
+   - uses: actions/upload-artifact@v3
+     with:
+      path: world.txt
+     
