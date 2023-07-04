@@ -1,5 +1,6 @@
 name: Addition_Reusable_workflow
 on: 
+ workflow_dispatch:
  workflow_call:
   inputs:
    number1:
@@ -31,6 +32,11 @@ jobs:
       echo "Add two numbers ${{ inputs.number1 }} and  ${{ inputs.number2 }}"
       sum=`expr ${{ inputs.number1 }} + ${{ inputs.number2 }} `
       echo "summation=$sum"
+   - name: Archive artifacts
+     uses: actions/upload-artifact@v2
+     with:
+        name: my-artifact
+        path: path/to/artifacts
  
  
  
