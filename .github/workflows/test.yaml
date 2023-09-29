@@ -1,5 +1,6 @@
 name: Addition_Reusable_workflow
 on: 
+ workflow_dispatch:
  workflow_call:
 
 jobs:
@@ -7,6 +8,6 @@ jobs:
    runs-on: ubuntu-latest
    steps:
    - uses: actions/checkout@v3
-   - run: echo hello world
+   - run: echo ${{env.name}}
      
  
