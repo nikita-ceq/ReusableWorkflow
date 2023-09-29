@@ -10,7 +10,7 @@ jobs:
    - uses: actions/checkout@v3
    - run: |
       echo ${{vars.name}}
-      echo "suraj=kaul" >> $GITHUB_ENV
+      echo "suraj=16" >> $GITHUB_ENV
       echo "${{ env.suraj }}"
      
  
