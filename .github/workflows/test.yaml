@@ -11,6 +11,6 @@ jobs:
    - run: |
       echo ${{vars.name}}
       echo "suraj=16" >> $GITHUB_ENV
-      echo "${{ env.suraj }}"
+      echo ${{ env.suraj }}
      
  
