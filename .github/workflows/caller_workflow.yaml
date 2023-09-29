@@ -22,11 +22,11 @@ jobs:
   with:
    number1: 2
    number2: 4
- calling-subtraction-job:
-  uses: goyal20nikita/ReusableWorkflow/.github/workflows/subtraction.yaml@main
-  with:
-   number1: 4
-   number2: 3
+ # calling-subtraction-job:
+ #  uses: goyal20nikita/ReusableWorkflow/.github/workflows/subtraction.yaml@main
+ #  with:
+ #   number1: 4
+ #   number2: 3
 #  retrieve_output_from_job2:
 #    runs-on: ubuntu-latest
 #    needs: calling-addition-job
