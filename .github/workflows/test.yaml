@@ -8,6 +8,9 @@ jobs:
    runs-on: ubuntu-latest
    steps:
    - uses: actions/checkout@v3
-   - run: echo ${{vars.name}}
+   - run: |
+      echo ${{vars.name}}
+      echo "suraj=kaul" >> $GITHUB_ENV
+      echo $suraj
      
  
