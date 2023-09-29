@@ -19,10 +19,10 @@ jobs:
    runs-on: ubuntu-latest
    steps:
    - uses: actions/checkout@v3
-   - run: |
-      echo "Subtract two numbers ${{ inputs.number1 }} and  ${{ inputs.number2 }}"
-      subtraction=`expr ${{ inputs.number1 }}-{{ inputs.$number2 }}`
-      echo "$subtraction"
- 
+   - id: step1
+     run: |
+      echo "Add two numbers ${{ inputs.number1 }} and  ${{ inputs.number2 }}"
+      addition=`expr ${{ inputs.number1 }} + {{ inputs.$number2 }}`
+      echo "$addition"
  
  
