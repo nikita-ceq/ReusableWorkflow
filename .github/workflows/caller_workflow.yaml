@@ -3,11 +3,11 @@ on:
  workflow_dispatch:
   inputs:
    number1:
-    description: 'Enter first number'     
+    description: 'Enter first number 1'     
     required: true
     type: number
    number2:
-    description: 'Enter second number'     
+    description: 'Enter second number 2'     
     required: true
     type: number
 #env:
