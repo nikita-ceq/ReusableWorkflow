@@ -10,8 +10,14 @@ jobs:
    - uses: actions/checkout@v3
    - run: |
       echo ${{vars.name}}
-      echo "suraj=16" >> $GITHUB_ENV
-      echo ${{ env.suraj }}
-      env
+      tests=16
+      failures=2
+
+      # set them as GitHub ENV variables
+      echo "Tests=$tests" >> $GITHUB_ENV
+      echo "Failures=$failures" >> $GITHUB_ENV
+
+      # retrieve these GitHub ENV variables
+      echo "${{ env.Failures }} out of ${{ env.Tests }} tests failed on CI"
      
  
