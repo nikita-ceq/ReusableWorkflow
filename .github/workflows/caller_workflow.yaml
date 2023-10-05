@@ -18,10 +18,15 @@ jobs:
  calling-test-job:
   uses: goyal20nikita/ReusableWorkflow/.github/workflows/test.yaml@main
  calling-addition-job:
-  uses: goyal20nikita/ReusableWorkflow/.github/workflows/addition.yaml@main
+  uses: goyal20nikita/reusable_private/.github/workflows/add.yaml@main
   with:
    number1: 2
    number2: 4
+ # calling-addition-job:
+ #  uses: goyal20nikita/ReusableWorkflow/.github/workflows/addition.yaml@main
+ #  with:
+ #   number1: 2
+ #   number2: 4
  # calling-subtraction-job:
  #  uses: goyal20nikita/ReusableWorkflow/.github/workflows/subtraction.yaml@main
  #  with:
