@@ -13,7 +13,8 @@ on:
 #env:
  #number1: ${{ github.event.inputs.number1 }}
  #number2: ${{ github.event.inputs.number2 }}
-
+env:
+  PRIVATE_REPO_ACCESS_TOKEN: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
 jobs:
  calling-test-job:
   uses: goyal20nikita/ReusableWorkflow/.github/workflows/test.yaml@main
