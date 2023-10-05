@@ -20,7 +20,7 @@ jobs:
  calling-addition-job:
   uses: goyal20nikita/reusable_private/.github/workflows/add.yaml@main
   with:
-   number1: 2
+   number1: 4
    number2: 4
  # calling-addition-job:
  #  uses: goyal20nikita/ReusableWorkflow/.github/workflows/addition.yaml@main
