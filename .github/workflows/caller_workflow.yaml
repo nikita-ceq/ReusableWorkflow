@@ -18,11 +18,11 @@ on:
 jobs:
  calling-test-job:
   uses: goyal20nikita/ReusableWorkflow/.github/workflows/test.yaml@main
- calling-addition-job1:
-  uses: nikita-ceq/reusable_private/.github/workflows/add.yaml@main
-  with:
-   number1: 4
-   number2: 4
+ # calling-addition-job1:
+ #  uses: nikita-ceq/reusable_private/.github/workflows/add.yaml@main
+ #  with:
+ #   number1: 4
+ #   number2: 4
  calling-addition-job2:
   uses: goyal20nikita/ReusableWorkflow/.github/workflows/addition.yaml@main
   with:
