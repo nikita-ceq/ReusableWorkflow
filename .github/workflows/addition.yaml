@@ -10,6 +10,9 @@ on:
     description: 'Enter second number'     
     required: true  
     type: number
+  secrets:
+     pat_token:
+        required: true
   outputs:
    sum:
      description: "addition value"
