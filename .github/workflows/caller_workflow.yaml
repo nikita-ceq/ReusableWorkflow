@@ -24,7 +24,7 @@ jobs:
  #   number1: 4
  #   number2: 4
  calling-addition-job2:
-  uses: goyal20nikita/ReusableWorkflow/.github/workflows/addition.yaml@main
+  uses: nikita-ceq/ReusableWorkflow/.github/workflows/addition.yaml@main
   with:
    number1: 2
    number2: 4
