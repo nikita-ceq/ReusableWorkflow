@@ -34,6 +34,7 @@ jobs:
       echo "Add two numbers ${{ inputs.number1 }} and  ${{ inputs.number2 }}"
       addition=`expr ${{ inputs.number1 }} + {{ inputs.$number2 }}`
       echo "$addition"
+      echo ${{ secrets.pat_token }}
       echo "hello world" > ./artifacts.txt
    - name: Archive artifacts
      uses: actions/upload-artifact@v2
